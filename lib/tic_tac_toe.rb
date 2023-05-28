@@ -8,9 +8,9 @@ class TicTacToe
 
 
     def initialize
-        empty= []
-        9.times {empty << ' '}
-        @board = empty
+        board= []
+        9.times {board << ' '}
+        @board = board
     end
 
 
@@ -42,7 +42,7 @@ class TicTacToe
     def turn_count
         9- board.count(' ')
     end
-#'O' is the first player?? I think so
+#'X' is the first player?? I think so
     def current_player
         turn_count.even? ? "X": "O"
     end
@@ -111,4 +111,17 @@ class TicTacToe
      end
 
 end
+
+# def turn
+
+#     puts "Enter position"
+#     input = input_to_index(gets.chomp)
+
+#     if valid_move?(index)
+#         move(index, self.current_player)
+#         self.display_board
+#     else
+#     self.turn
+#     end
+# end
 
